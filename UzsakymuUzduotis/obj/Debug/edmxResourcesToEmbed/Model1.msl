@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tctaskModelStoreContainer" CdmEntityContainer="tctaskEntities">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="tctaskModel.client">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+          <ScalarProperty Name="clientName" ColumnName="clientName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="tctaskModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+          <ScalarProperty Name="orderProduct" ColumnName="orderProduct" />
+          <ScalarProperty Name="orderClient" ColumnName="orderClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="tctaskModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+          <ScalarProperty Name="productTitle" ColumnName="productTitle" />
+          <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

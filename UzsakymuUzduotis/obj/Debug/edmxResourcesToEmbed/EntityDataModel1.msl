@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServiceDatabaseModelStoreContainer" CdmEntityContainer="connString">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="ServiceDatabaseModel.client">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="clientName" ColumnName="clientName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="ServiceDatabaseModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="product" ColumnName="product" />
+          <ScalarProperty Name="client" ColumnName="client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="ServiceDatabaseModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

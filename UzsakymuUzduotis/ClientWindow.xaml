@@ -1,0 +1,35 @@
+﻿<Window x:Class="UzsakymuUzduotis.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UzsakymuUzduotis"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Klientai" Height="600" Width="600">
+    <Grid>
+        <Button  x:Name="addButton" Content="Sukurti klientą" Click="addButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Width="110" Height="30" Margin="450,15,0,0"/>
+        <TextBlock Text="Klientų sąrašas"   Height="auto" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Content="Užsakymų sąrašas" Click="backToOrders" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,400,15"  Width="128" Height="20" />
+        <Button Content="Prekių sąrašas" Click="backtoProducts" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,15"  Width="128" Height="20" />
+        <DockPanel Margin="50,60,50,50">
+            <DataGrid x:Name="customGrid" x:FieldModifier="public" AutoGenerateColumns="false" ColumnWidth="*" CanUserAddRows="False" AlternatingRowBackground="LightGray">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" MinWidth="25" MaxWidth="25" Binding="{Binding idClient}"/>
+                    <DataGridTextColumn Header="Kliento vardas" Binding="{Binding clientName}"/>
+                    <DataGridTemplateColumn MaxWidth="100" MinWidth="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Margin="1" x:Name="editButton" Content="Koreguoti" Click="editButton_Click"/>
+                                    <Button Margin="1" x:Name="removeButton" Content="Ištrinti" Click="removeButton_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+
+    </Grid>
+</Window>
